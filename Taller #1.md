@@ -195,11 +195,93 @@ $P \approx 1 - 0.9999$
 
 $P \approx 0.0001$
 
-> Por tanto la probabilidad de que la probabilidad que la proporción muestral de p sea de más de $0.22$ es de $0.001%$
+> Por tanto la probabilidad de que la probabilidad que la proporción muestral de p sea de más de $0.22$ es de $0.001\%$
 
 3. Los datos sobre el perfil de la audiencia del sitio de la Red ESPN indicaron que el $31\%$ de los usuarios son mujeres. Suponga que este porcentaje se basó en una muestra de $600$ usuarios.
 
+$P = 0.31$
+
+$Q = 0.69$
+
+$n = 600$
+
 a. Que probabilidad hay de encontrar de que la proporción muestral este a $± 0.025$ de la proporción poblacional
+
+$ε = 0.025$
+
+Por tanto tomando los datos preliminares
+
+$P_{gorrito} = 0.31$
+
+$P_{gorrito_{1}} = 0.31 - ε$
+
+$P_{gorrito_{1}} = 0.31 - 0.025$
+
+$P_{gorrito_{1}} = 0.285$
+
+$P_{gorrito_{2}} = 0.31 + ε$
+
+$P_{gorrito_{2}} = 0.31 + 0.025$
+
+$P_{gorrito_{2}} = 0.335$
+
+Para calcular la probabilidad se puede usar
+
+$Z = \frac{P_{gorrito} - P}{\sqrt{\frac{P * Q}{n}}}$
+
+Por ende $Z$ será
+
+$Z_{1} = \frac{P_{gorrito_{1}} - P}{\sqrt{\frac{P * Q}{n}}}$
+
+$Z_{1} = \frac{P_{gorrito_{1}} - 0.31}{\sqrt{\frac{0.31 * 0.69}{600}}}$
+
+$Z_{1} = \frac{0.285 - 0.31}{\sqrt{\frac{0.31 * 0.69}{600}}}$
+
+$Z_{1} = -1.324067853$
+
+$Z_{2} = \frac{P_{gorrito_{2}} - P}{\sqrt{\frac{P * Q}{n}}}$
+
+$Z_{2} = \frac{P_{gorrito_{2}} - 0.31}{\sqrt{\frac{0.31 * 0.69}{600}}}$
+
+$Z_{2} = \frac{0.335 - 0.31}{\sqrt{\frac{0.31 * 0.69}{600}}}$
+
+$Z_{2} = 1.324067853$
+
+Para calcular la probabilidad
+
+$P(0.285 \le x \le 0.335)
+
+Lo que es equivalente a
+
+P(-1.324067853 \le Z \le 1.324067853)$
+
+Así que, para determinar la probabilidad de encontrar que la proporción muestral este a ±0.025 de la proporción poblacional, se dice que:
+
+$P_{1}(Z ≤ -1.324067853)$
+
+```
+=DISTR.NORM.ESTAND(-1.324067853)
+```
+
+$P_{1} = 0.09274026$
+
+$P_{2}(Z ≤ 1.324067853)$
+
+```
+=DISTR.NORM.ESTAND(1.324067853)
+```
+
+$P_{2} = 0.90725974$
+
+$P = P_{2} - P_{1}$
+
+$P = 0.90725974 - 0.09274026$
+
+$P = 0.81451949$
+
+$P \approx 81.45\%$
+
+> Por ende se puede decir que, la probabilidad de encontrar que la proporción muestral este a ±0.025 de la proporción poblacional, es de $81.45\%$
 
 b. Que probabilidad hay que que al tomar una muestra de $210$ mujeres ellas mujeres escuchen Red ESPN
 
