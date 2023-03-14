@@ -1,5 +1,5 @@
 <p align="center">
-Ejercicios de Distribuciones Muestrales
+Taller de Distribuciones Muestrales
 </p><p align="center">
 Marzo 10 de 2023
 </p>
