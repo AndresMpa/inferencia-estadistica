@@ -4,7 +4,7 @@ Exposión combinatorial: Cuando se dispara el número de calculos de una combina
 
 $E(x_{barra}) = u$ -> Media
 
-$V(x_{barra}) = \frac{(∇_{x})^2 }{n}$ -> Varianza
+$V(x_{barra}) = \frac{(σ_{x})^2 }{n}$ -> Varianza
 
 $σ(x_{barra}) = \frac{σ_{x}}{\sqrt{n}}$ -> Desviación
 
