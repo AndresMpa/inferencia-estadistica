@@ -223,3 +223,4 @@ El intervalor °70C: $28 \pm 3.8649$
 
 El intervalo °70C = $(24.1351 ; 31.8649)$
 
+> Si el valor resultante es menor que alpha la hipotesis nula se rechaza
