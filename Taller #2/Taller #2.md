@@ -1,34 +1,45 @@
-# Taller ANOVA
+<div align="center">
 
-![punto_1](./assets/punto_1.png "Punto 1")
+  # Taller ANOVA
+
+  ![punto_1](./assets/punto_1.png "Punto 1")
+
+</div>
 
 ### _Solución 1.a_
 
 Tomando los datos preliminares
 
 $\alpha = 5\%$
+
 $\alpha = 0.05$
 
 Con la tabla se pueden calcular las medias
 
 $\bar{X}_{p15} = \frac{7+7+15+11+9}{5}$
+
 $\bar{X}_{p15} = 9.8$
 
 $\bar{X}_{p20} = \frac{12+17+12+18+18}{5}$
+
 $\bar{X}_{p20} = 15.4$
 
 $\bar{X}_{p25} = \frac{14+18+18+19+19}{5}$
+
 $\bar{X}_{p25} = 17.6$
 
 $\bar{X}_{p30} = \frac{19+25+22+19+23}{5}$
+
 $\bar{X}_{p30} = 21.6$
 
 $\bar{X}_{p35} = \frac{7+10+11+15+11}{5}$
+
 $\bar{X}_{p35} = 10.8$
 
 Usando los valores anteriores, se puede calcular el promedio de medias $\bar{\bar{X}}$
 
 $\bar{\bar{X}} = \frac{9.8+15.4+17.6+21.6+10.8}{5}$
+
 $\bar{\bar{X}} = 15.04$
 
 Con las medias se puede calcular el $sctr$
@@ -57,11 +68,15 @@ $$sce = \sum_{j=1}^k(n_j-1)*S_j^2$$
 
 Para poder calcularlo se necesita conocer la varianza de las muestras de cada proporción de algodón en las telas
 
-| Porcentaje de algodón | 15%  | 20%  | 25%  | 30%  | 35%  |
-| --------------------- | ---- | ---- | ---- | ---- | ---- |
-| Media                 | 9.8  | 15.4 | 17.6 | 21.6 | 10.8 |
-| Varianza              | 8.96 | 7.84 | 3.44 | 5.44 | 6.56 |
+<div align="center">
 
+  | Porcentaje de algodón | 15%  | 20%  | 25%  | 30%  | 35%  |
+  | --------------------- | ---- | ---- | ---- | ---- | ---- |
+  | Media                 | 9.8  | 15.4 | 17.6 | 21.6 | 10.8 |
+  | Varianza              | 8.96 | 7.84 | 3.44 | 5.44 | 6.56 |
+
+</div>
+  
 > Para el calculo de la varianza se ha usado la función `VAR.P(valor)` de excel
 
 Una vez con la tabla se puede hacer el calculo
@@ -186,9 +201,11 @@ Intervalo para $15\%$ de algodón en la tela se puede calcula como:
 $\mu = 9.8 \pm 2.420937075$
 
 $\mu_1 = 9.8 + 2.420937075$
+
 $\mu_1 = 12.22093707$
 
 $\mu_2 = 9.8 - 2.420937075$
+
 $\mu_2 = 7.379062925$
 
 ---
@@ -198,9 +215,11 @@ Intervalo para $20\%$ de algodón en la tela se puede calcula como:
 $\mu = 15.4 \pm 2.420937075$
 
 $\mu_1 = 15.4 + 2.420937075$
+
 $\mu_1 = 17.82093707$
 
 $\mu_2 = 15.4 - 2.420937075$
+
 $\mu_2 = 12.97906293$
 
 ---
@@ -210,9 +229,11 @@ Intervalo para $25\%$ de algodón en la tela se puede calcula como:
 $\mu = 17.6 \pm 2.420937075$
 
 $\mu_1 = 17.6 + 2.420937075$
+
 $\mu_1 = 20.02093707$
 
 $\mu_2 = 17.6 - 2.420937075$
+
 $\mu_2 = 15.17906293$
 
 ---
@@ -222,9 +243,11 @@ Intervalo para $30\%$ de algodón en la tela se puede calcula como:
 $\mu = 21.6 \pm 2.420937075$
 
 $\mu_1 = 21.6 + 2.420937075$
+
 $\mu_1 = 24.02093707$
 
 $\mu_2 = 21.6 - 2.420937075$
+
 $\mu_2 = 19.17906293$
 
 ---
@@ -234,23 +257,29 @@ Intervalo para $35\%$ de algodón en la tela se puede calcula como:
 $\mu = 10.8 \pm 2.420937075$
 
 $\mu_1 = 10.8 + 2.420937075$
+
 $\mu_1 = 13.22093707$
 
 $\mu_2 = 10.8 - 2.420937075$
+
 $\mu_2 = 8.379062925$
 
 ---
 
 #### Tabla de intervalos
 
-|         | 15%         | 20%         | 25%         | 30%         | 35%         |
-| ------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Punto B | 12.22093707 | 17.82093707 | 20.02093707 | 24.02093707 | 13.22093707 |
-| Punto A | 7.379062925 | 12.97906293 | 15.17906293 | 19.17906293 | 8.379062925 |
+<div align="center">
+
+  |         | 15%         | 20%         | 25%         | 30%         | 35%         |
+  | ------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+  | $\mu_1$ | 12.22093707 | 17.82093707 | 20.02093707 | 24.02093707 | 13.22093707 |
+  | $\mu_2$ | 7.379062925 | 12.97906293 | 15.17906293 | 19.17906293 | 8.379062925 |
 
 
-![intervalos](./assets/intervalos.png "Grafico de los intervalos")
+  ![intervalos](./assets/intervalos.png "Grafico de los intervalos")
 
+</div>
+  
 ![punto_2](./assets/punto_2.png "Punto 2")
 
 ![punto_3](./assets/punto_3.png "Punto 3")
