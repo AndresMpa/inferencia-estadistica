@@ -120,23 +120,22 @@ $F_{calculado} = 18.44602978$
 Para calcular el valor de $F_{critico}$ se puede usar excel
 
 ```
-INV.F.CD(alpha; F_calculado; n_T - k)
+INV.F.CD(alpha; k - 1; n_T - k)
 ```
 
 Donde:
 
 - $alpha = 0.05$
-- $F_{calculado} = 18.446$
 - $n_T = 25$
 - $k = 5$
 
 Por tanto:
 
 ```
-INV.F.CD(0.05; 18; 25 - 5)
+INV.F.CD(0.05; 4; 25 - 5)
 ```
 
-$F_{critico} = 2.151124427$
+$F_{critico} = 2.866081402$
 
 Se plantea la afirmación
 
@@ -144,7 +143,7 @@ $F_{calculado} > F_{critico}$
 
 #### <i><ins>Respuesta:</ins></i>
 
-$\therefore 18.44602978 > 2.151124427$ por lo que se rechaza la hipotesis $H_0$; es decir; el porcentaje de algodón en la tela si es un dato significitivo para lo que busca el ingeniero
+$\therefore 18.44602978 > 2.866081402$ por lo que se rechaza la hipotesis $H_0$; es decir; el porcentaje de algodón en la tela si es un dato significitivo para lo que busca el ingeniero
 
 <!---
 Ref http://red.unal.edu.co/cursos/ciencias/2000352/html/casos/cont_03.html
@@ -278,8 +277,12 @@ $\mu_2 = 8.379062925$
 ![intervalos](./assets/intervalos.png "Grafico de los intervalos")
 
 </div>
-  
+
+<div align="center">
+
 ![punto_2](./assets/punto_2.png "Punto 2")
+
+</div>
 
 ### _Tabla ANOVA_
 
@@ -299,7 +302,11 @@ Datos preliminares:
 
 El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observada se deba al azar es extremadamente baja, lo que indica que hay una diferencia significativa entre los métodos propuestos
 
+<div align="center">
+
 ![punto_3](./assets/punto_3.png "Punto 3")
+
+</div>
 
 ### _Solución 3.a_
 
@@ -307,4 +314,59 @@ El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observa
 Ref: https://es.slideshare.net/iorifoar/ejercicios-cuadrados-greco-latinos-ejercicio-3
 -->
 
+<div align="center">
+
 ![punto_4](./assets/punto_4.png "Punto 4")
+
+</div>
+
+### _Solución_
+
+Tomando los datos preliminares
+
+$\alpha = 5\%$
+
+$\alpha = 0.05$
+
+$k = 4$
+
+$n_T = 12$
+
+1. Plantenado las hipotesis:
+
+$H_0: \alpha_{i} = 0$
+
+$H_1: \alpha_{i} \neq 0$
+
+> La hipotesis se ha de centrar en el factor A (El detergente), no tendría sentido centrarse en las manchas
+
+2. Planteamos el alpa:
+
+$\alpha = 0.05$
+
+3. Se calcula el valor del estadistico de prueba $F$
+
+$F_{calculado} = 11.77876106$
+
+<div align="center">
+
+#### Tabla ANOVA
+
+| Fuente   | Suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F critico  | Valor P     |
+| -------- | ----------------- | ------------------ | ---------------- | ------------- | ----------- | ----------- |
+| Factor A | 110.9166667       | 3                  | 36.97222222      | 11.77876106   | 0.983818621 | 0.000926591 |
+| Factor B | 135.1666667       | 2                  | 67.58333333      | 21.53097345   | 0.951621501 | 0.00015731  |
+| Error    | 18.83333333       | 6                  | 3.138888889      |               |             |             |
+| Total    | 264.9166667       | 11                 |                  |               |             |             |
+
+</div>
+
+Se plantea la afirmación
+
+$F_{calculado} > F_{critico}$
+
+$11.77876106 > 0.983818621$
+
+#### <i><ins>Respuesta:</ins></i>
+
+$\therefore 11.77876106 > 0.983818621$ por lo que se rechaza la hipotesis $H_0$; es decir; estadisticamente hablando con un seguridad del 95% se puede afirmar que entre los 4 detergentes hay una diferencia
