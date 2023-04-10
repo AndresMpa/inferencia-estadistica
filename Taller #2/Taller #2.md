@@ -1,8 +1,8 @@
 <div align="center">
 
-  # Taller ANOVA
+# Taller ANOVA
 
-  ![punto_1](./assets/punto_1.png "Punto 1")
+![punto_1](./assets/punto_1.png "Punto 1")
 
 </div>
 
@@ -70,10 +70,10 @@ Para poder calcularlo se necesita conocer la varianza de las muestras de cada pr
 
 <div align="center">
 
-  | Porcentaje de algodón | 15%  | 20%  | 25%  | 30%  | 35%  |
-  | --------------------- | ---- | ---- | ---- | ---- | ---- |
-  | Media                 | 9.8  | 15.4 | 17.6 | 21.6 | 10.8 |
-  | Varianza              | 8.96 | 7.84 | 3.44 | 5.44 | 6.56 |
+| Porcentaje de algodón | 15%  | 20%  | 25%  | 30%  | 35%  |
+| --------------------- | ---- | ---- | ---- | ---- | ---- |
+| Media                 | 9.8  | 15.4 | 17.6 | 21.6 | 10.8 |
+| Varianza              | 8.96 | 7.84 | 3.44 | 5.44 | 6.56 |
 
 </div>
   
@@ -270,18 +270,41 @@ $\mu_2 = 8.379062925$
 
 <div align="center">
 
-  |         | 15%         | 20%         | 25%         | 30%         | 35%         |
-  | ------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-  | $\mu_1$ | 12.22093707 | 17.82093707 | 20.02093707 | 24.02093707 | 13.22093707 |
-  | $\mu_2$ | 7.379062925 | 12.97906293 | 15.17906293 | 19.17906293 | 8.379062925 |
+|         | 15%         | 20%         | 25%         | 30%         | 35%         |
+| ------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Punto B | 12.22093707 | 17.82093707 | 20.02093707 | 24.02093707 | 13.22093707 |
+| Punto A | 7.379062925 | 12.97906293 | 15.17906293 | 19.17906293 | 8.379062925 |
 
-
-  ![intervalos](./assets/intervalos.png "Grafico de los intervalos")
+![intervalos](./assets/intervalos.png "Grafico de los intervalos")
 
 </div>
   
 ![punto_2](./assets/punto_2.png "Punto 2")
 
+### _Tabla ANOVA_
+
+Datos preliminares:
+
+- $k = 3$
+- $n_T = 30$
+- $\alpha = 0.05$
+
+| Fuente       | suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F crititco    | Valor P       |
+| ------------ | ----------------- | ------------------ | ---------------- | ------------- | ------------- | ------------- |
+| Tratamientos | $4560$            | $2$                | $2280$           | $9.865384615$ | $0.951317288$ | $0.000539043$ |
+| Error        | $6240$            | $27$               | $231.1111111$    |               |               |               |
+| Total        | $10800$           | $29$               |                  |               |               |               |
+
+### _Solución 2.a_
+
+El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observada se deba al azar es extremadamente baja, lo que indica que hay una diferencia significativa entre los métodos propuestos
+
 ![punto_3](./assets/punto_3.png "Punto 3")
+
+### _Solución 3.a_
+
+<!--
+Ref: https://es.slideshare.net/iorifoar/ejercicios-cuadrados-greco-latinos-ejercicio-3
+-->
 
 ![punto_4](./assets/punto_4.png "Punto 4")
