@@ -48,8 +48,11 @@ Donde:
 - $sce$ suma del cuadrado del error
 - $cme$ cuadrado medio del error
 - $s_j^2$ varianza del tratamiento $j$
-- $n_T$ número total de observacuines
+- $n_T$ número total de observaciones
 - $F$ distribución de probabilidad de $F$ de ficha
+- $\mu$ intervalo de confianza
+- $S$ desviación de la varianza del error
+- $t$ de student
 
 $$sctr = \sum_{j=1}^k(n_j) * (\bar{x}_j - \bar{\bar{x}})^2$$
 
@@ -63,9 +66,13 @@ $$cme = \frac{sce}{n_T-k}$$
 
 $$F = \frac{cmtr}{cme}$$
 
+$$\mu = \bar{x_i} \pm t_{\frac{\alpha}{2}} * \frac{S}{\sqrt{n_j}}$$
+
+$$S = \sqrt{cme}$$
+
 ## Ejemplo propuesto
 
-- Para estudiar el efecto de la temperatura en el rendimiento de un proceso quimico, se produjeron 5 lotes con cada uno de los 3 tratamientos. Los resultados se presentan a continuación-
+- Para estudiar el efecto de la temperatura en el rendimiento de un proceso quimico, se produjeron 5 lotes con cada uno de los 3 tratamientos. Los resultados se presentan a continuación
 
 - De la tabla para el analisis de varianza. Use un alfa del 5% para probar si la temperatura afecta el rendimiento del proceso
 
@@ -142,7 +149,7 @@ Ahora calculamos el sce:
 
 $$sce = \sum_{j=1}^k(n_j-1)*S_j^2$$
 
-$sce = 4*25.6+4+14+4*7.6$
+$sce = (4*25.6)+(4*14)+(4*7.6)$
 
 $sce = 102.4 + 56 + 30.4$
 
@@ -172,7 +179,7 @@ $2.22 > 3.89$ No apruebo la hipotesis $H_0$
 
 Donde:
 
-- $t$ de student; para calcular el valor de t se puede usar
+- $t$ de student; para calcular el valor de $t$ se puede usar
 ```
 DISTR.T.INV(2 * alpha; valor)
 ```
@@ -184,7 +191,7 @@ $$S = \sqrt{cme}$$
 
 ## Retomando el ejemplo anterior
 
-Intervalor para 50°C se puede calcula con:
+Intervalo para 50°C se puede calcula con:
 
 $$\mu = \bar{x}_i \pm t_{\frac{\alpha}{2}} * \frac{S}{\sqrt{n_j}}$$
 

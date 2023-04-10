@@ -31,13 +31,13 @@ Ahora para calcular el $sctr$
 
 $$sctr = \sum_{j=1}^k(n_j) * (\bar{x}_j - \bar{\bar{x}})^2$$
 
-$sctr = 5*[(128.2 - 137.15)^2 + (140.4 - 137.15)^2 + (136 - 137.15)^2 + (144 - 137.15)^2 + (144 - 137.15)^2]$
+$sctr = 5*[(128.2 - 137.15)^2 + (140.4 - 137.15)^2 + (136 - 137.15)^2 + (144 - 137.15)^2]$
 
 $sctr = 694.55$
 
-$cmtr = \frac{694.55}{5}$
+$cmtr = \frac{694.55}{3}$
 
-$cmtr = $
+$cmtr = 231.56$
 
 $sce = 4 * [22.7+12.8+21+54.5]$
 
@@ -66,7 +66,7 @@ $F_{critico} = F(0.05; 3; 16) = 3.2389$
 
 $8.346 \gt 3.2389$
 
-5. Consqrtclusión
+5. Conclusión
 
 $R.H_0$. Por tanto con un nivelde confianza del 95% podemos concluir que si existe diferencia en los tiempos de secado con respectoma la pintura
 
@@ -81,4 +81,4 @@ $R.H_0$. Por tanto con un nivelde confianza del 95% podemos concluir que si exis
 $S = \sqrt{cme}$
 $S = \sqrt{5.2678}$
 
-$\frac{t\alpha}{2} = t(0.025; 16) = 2.1199$
+$t_\frac{\alpha}{2} = t(0.025; 16) = 2.1199$
