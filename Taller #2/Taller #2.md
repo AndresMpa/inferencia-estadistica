@@ -294,7 +294,7 @@ Datos preliminares:
 
 | Fuente       | suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F crititco    | Valor P       |
 | ------------ | ----------------- | ------------------ | ---------------- | ------------- | ------------- | ------------- |
-| Tratamientos | $4560$            | $2$                | $2280$           | $9.865384615$ | $0.951317288$ | $0.000539043$ |
+| Tratamientos | $4560$            | $2$                | $2280$           | $9.865384615$ | $3.354130829$ | $0.000539043$ |
 | Error        | $6240$            | $27$               | $231.1111111$    |               |               |               |
 | Total        | $10800$           | $29$               |                  |               |               |               |
 
@@ -313,6 +313,24 @@ El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observa
 <!--
 Ref: https://es.slideshare.net/iorifoar/ejercicios-cuadrados-greco-latinos-ejercicio-3
 -->
+
+<div align="center">
+
+![datos_desordenados](./assets/unordered.png "Datos desordenados")
+
+![datos_ordenados](./assets/ordered.png "Datos ordenados")
+
+</div>
+
+Tomando los datos preliminares
+
+$A = 6$
+
+$B = 6$
+
+$n_T = 36$
+
+
 
 <div align="center">
 
