@@ -476,7 +476,7 @@ $\alpha = 0.05$
 
 $k = 4$
 
-$n_T = 12$
+$n = 12$
 
 1. Plantenado las hipotesis:
 
@@ -492,7 +492,61 @@ $\alpha = 0.05$
 
 3. Se calcula el valor del estadistico de prueba $F$
 
-$F_{calculado} = 11.77876106$
+Para este proposito podemos usar la tabla ANOVA
+
+<div align="center">
+
+| Fuente   | Suma de cuadrados | Grados de libertad       | Cuadrados medios                      | Estadistico F                     | F critico  | Valor P   |
+| -------- | ----------------- | ------------------------ | ------------------------------------- | --------------------------------- | ---------- | --------- |
+| Factor A | $SC_A$            | $GL_A = a - 1$           | $MC_A = \frac{SC_A}{a - 1}$           | $F_{objetivo} = \frac{MC_A}{MCE}$ | `INV.F.CD` | `DISTR.F` |
+| Factor B | $SC_B$            | $GL_B = b - 1$           | $MC_B = \frac{SC_B}{b - 1}$           |                                   |            |           |
+| Error    | $SCE$             | $GLE = (a - 1) * (b -1)$ | $MC_E = \frac{SCE}{(a - 1) * (b -1)}$ |                                   |            |           |
+| Total    | $SCT$             | $GLT = ab - 1$           |                                       |                                   |            |           |
+
+</div>
+
+Para poder llenar la tabla se han de calcular algunos datos empezando por la media de los datos
+
+<div align="center">
+
+![Media](./assets/mean.png "Media de los datos")
+
+</div>
+
+Con la media de los datos podemos facilmente calcular los cuadrados de cada factor
+
+Para el factor A que corresponde con el tiempo de los quimicos podemos usar:
+
+$$SC_A = b * \sum_{i=1}^{a}{\bar{y_i}^2 - n * \bar{y}^2}$$
+
+$SC_A = 3 * (46.33333333^2 + 48.33333333^2 + 51^ + 42.66666667^2) - 12 * 47.08333333^2$
+
+$SC_A = 110.9166667$
+
+Para el factor B similar al factor A podemos usar:
+
+$$SC_B = a * \sum_{i=1}^{b}{\bar{y_i}^2 - n *\bar{y}^2}$$
+
+$SC_B = 4 * (45.5^2 + 44^2 + 51.75^2) - 12 * 47.08333333^2$
+
+$SC_B = 135.1666667$
+
+Otro dato que se puede calcular es el total o SCT, para esto usamos:
+
+$$SCT = \sum_{i=1}^{a} \sum_{i=1}^{b}{\bar{y_{ij}}^2 - n *\bar{y}^2}$$
+
+$SCT = 26867 - 12 * 47.08333333^2$
+
+$SCT = 264.9166667$
+
+Con estos valores se puede calcular el SCE:
+
+$$SCE = SCT - (SC_{A} + SC_{B})$$
+
+$SCE = 264.9166667 - (110.9166667 + 135.1666667)$
+
+$SCE = 18.83333333$
+
 
 <div align="center">
 
@@ -500,8 +554,8 @@ $F_{calculado} = 11.77876106$
 
 | Fuente   | Suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F critico   | Valor P     |
 | -------- | ----------------- | ------------------ | ---------------- | ------------- | ----------- | ----------- |
-| Factor A | 110.9166667       | 3                  | 36.97222222      | 11.77876106   | 0.983818621 | 0.000926591 |
-| Factor B | 135.1666667       | 2                  | 67.58333333      | 21.53097345   | 0.951621501 | 0.00015731  |
+| Factor A | 110.9166667       | 3                  | 36.97222222      | 11.77876106   | 0.984430722 | 0.000926591 |
+| Factor B | 135.1666667       | 2                  | 67.58333333      |               |             |             |
 | Error    | 18.83333333       | 6                  | 3.138888889      |               |             |             |
 | Total    | 264.9166667       | 11                 |                  |               |             |             |
 
@@ -511,8 +565,8 @@ $F_{calculado} = 11.77876106$
 
 $F_{calculado} > F_{critico}$
 
-$11.77876106 > 0.983818621$
+$11.77876106 > 0.984430722$
 
 #### <i><ins>Respuesta:</ins></i>
 
-$\therefore 11.77876106 > 0.983818621$ por lo que se rechaza la hipotesis $H_0$; es decir; estadisticamente hablando con un seguridad del 95% se puede afirmar que entre los 4 detergentes hay una diferencia
+$\therefore 11.77876106 > 0.984430722$ por lo que se rechaza la hipotesis $H_0$; es decir; estadisticamente hablando con un seguridad del 95% se puede afirmar que entre los 4 detergentes hay una diferencia
