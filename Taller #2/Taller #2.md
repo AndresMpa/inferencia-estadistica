@@ -300,7 +300,7 @@ Datos preliminares:
 
 ### _Solución 2.a_
 
-El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observada se deba al azar es extremadamente baja, lo que indica que hay una diferencia significativa entre los métodos propuestos
+$\therefore 9.865384615$ > $3.354130829$ se rechaza la hipotesis $H_0$, lo que indica que hay una diferencia significativa entre los métodos propuestos
 
 <div align="center">
 
@@ -313,6 +313,8 @@ El valor de p de 0,0005 sugiere que la probabilidad de que la diferencia observa
 <!--
 Ref: https://es.slideshare.net/iorifoar/ejercicios-cuadrados-greco-latinos-ejercicio-3
 -->
+
+El primer paso será re ordenar los datos
 
 <div align="center">
 
@@ -328,9 +330,135 @@ $A = 6$
 
 $B = 6$
 
-$n_T = 36$
+$n = 36$
 
+Una vez se tiene los datos preliminares y la tabla ordenada podemos calcular la media de los datos
 
+<div align="center">
+
+![Media](./assets/promedio.png "Media de los datos")
+
+</div>
+
+Con la media de los datos podemos facilmente calcular los cuadrados de cada factor
+
+Para el factor A que corresponde con el tiempo de los quimicos podemos usar:
+
+$$SC_A = b * \sum_{i=1}^{a}{\bar{y_i}^2 - n * \bar{y}^2}$$
+
+Donde:
+
+- $b = 6$
+- $n = 36$
+- $\bar{y} = 18.38888889$
+
+$SC_A = 6 * (16^2 + 21.33333333^2 + 19.33333333^2 + 19.33333333^2 + 17.66666667^2 + 16.66666667^2) - 36 * 18.38888889^2$
+
+$SC_A = 117.8888889$
+
+Para el factor B similar al factor A podemos usar:
+
+$$SC_B = a * \sum_{i=1}^{b}{\bar{y_i}^2 - n *\bar{y}^2}$$
+
+Donde:
+
+- $b = 6$
+- $n = 36$
+- $\bar{y} = 18.38888889$
+
+$SC_B = 6 * (17.16666667^2 + 21.33333333^2 + 18^2 + 19^2 + 18.83333333^2 + 16^2) - 36 * 18.38888889^2$
+
+$SC_B = 99.55555556$
+
+Otro dato que se puede calcular es el total o SCT, para esto usamos:
+
+$$SCT = \sum_{i=1}^{a} \sum_{i=1}^{b}{\bar{y_{ij}}^2 - n *\bar{y}^2}$$
+
+Donde:
+
+- $\sum_{i=1}^{a} \sum_{i=1}^{b}{\bar{y_{ij}}^2} = 12808$
+- $n = 36$
+- $\bar{y} = 18.38888889$
+
+$SCT = 12808 - 36 * 18.38888889^2$
+
+$SCT = 634.5555556$
+
+Con estos valores se puede calcular el SCE:
+
+$$SCE = SCT - (SC_{A} + SC_{B})$$
+
+Donde:
+
+- $SC_A = 117.8888889$
+- $SC_B = 99.55555556$
+- $SCT = 634.5555556$
+
+$SCE = 634.5555556 - (117.8888889 + 99.55555556)$
+
+$SCE = 417.1111111$
+
+1. Plantenado las hipotesis:
+
+$H_0: \alpha_{i} = 0$
+
+$H_1: \alpha_{i} \neq 0$
+
+> La hipotesis se ha de centrar en el factor A (El tiempo), no tendría sentido centrarse en los lotes
+
+2. Planteamos el alpa:
+
+$\alpha = 0.05$
+
+3. Se calcula el valor del estadistico de prueba $F$
+
+Para este proposito se puede usar la tabla de ANOVA; ya que se han calculado los datos previamente se puede facilmente reemplazar en la tabla ANOVA
+
+<div align="center">
+
+| Fuente   | Suma de cuadrados | Grados de libertad       | Cuadrados medios                      | Estadistico F                     | F critico  | Valor P   |
+| -------- | ----------------- | ------------------------ | ------------------------------------- | --------------------------------- | ---------- | --------- |
+| Factor A | $SC_A$            | $GL_A = a - 1$           | $MC_A = \frac{SC_A}{a - 1}$           | $F_{objetivo} = \frac{MC_A}{MCE}$ | `INV.F.CD` | `DISTR.F` |
+| Factor B | $SC_B$            | $GL_B = b - 1$           | $MC_B = \frac{SC_B}{b - 1}$           |                                   |            |           |
+| Error    | $SCE$             | $GLE = (a - 1) * (b -1)$ | $MC_E = \frac{SCE}{(a - 1) * (b -1)}$ |                                   |            |           |
+| Total    | $SCT$             | $GLT = ab - 1$           |                                       |                                   |            |           |
+
+</div>
+
+> Notese que los valores a usar en las funciones de excel `INV.F.CD` y `DISTR.F` serían respectivamente
+
+```
+=INV.F.CD(alpha; GL_A; GLT)
+=DISTR.F(Estadistico_F; GL_A; GLT)
+```
+
+Reemplazando los datos tenemos
+
+<div align="center">
+
+| Fuente   | Suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F critico   | Valor P     |
+| -------- | ----------------- | ------------------ | ---------------- | ------------- | ----------- | ----------- |
+| Factor A | 117.8888889       | 5                  | 23.57777778      | 1.413159297   | 2.485143221 | 0.243662729 |
+| Factor B | 99.55555556       | 5                  | 19.91111111      |               |             |             |
+| Error    | 417.1111111       | 25                 | 16.68444444      |               |             |             |
+| Total    | 634.5555556       | 35                 |                  |               |             |             |
+
+</div>
+
+Por tanto se puede afirmar que:
+
+- $F_{objetivo} = 1.413159297$
+- $F_{critico} = 2.485143221$
+
+4. Se plantea la afirmación
+
+$F_{objetivo} > F_{critico}$
+
+$1.413159297 > 2.485143221$
+
+#### <i><ins>Respuesta:</ins></i>
+
+$\therefore 1.413159297 > 2.485143221$ por lo que se rechaza la hipotesis $H_1$; es decir; estadisticamente hablando con un seguridad del 95% se puede afirmar que no existe una diferencia signicativa entre los tiempos de respose A, B, C, D, E y F
 
 <div align="center">
 
@@ -370,7 +498,7 @@ $F_{calculado} = 11.77876106$
 
 #### Tabla ANOVA
 
-| Fuente   | Suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F critico  | Valor P     |
+| Fuente   | Suma de cuadrados | Grados de libertad | Cuadrados medios | Estadistico F | F critico   | Valor P     |
 | -------- | ----------------- | ------------------ | ---------------- | ------------- | ----------- | ----------- |
 | Factor A | 110.9166667       | 3                  | 36.97222222      | 11.77876106   | 0.983818621 | 0.000926591 |
 | Factor B | 135.1666667       | 2                  | 67.58333333      | 21.53097345   | 0.951621501 | 0.00015731  |
@@ -379,7 +507,7 @@ $F_{calculado} = 11.77876106$
 
 </div>
 
-Se plantea la afirmación
+4. Se plantea la afirmación
 
 $F_{calculado} > F_{critico}$
 
