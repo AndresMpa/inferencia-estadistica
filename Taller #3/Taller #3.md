@@ -71,7 +71,38 @@ b) Partiendo del supuesto de que no se ha realizado estudios similares en esta c
 
 </div>
 
-a) Estimar el total de vacas productoras de leche, así como el límite para el error de
-estimación
+a) Estimar el total de vacas productoras de leche, así como el límite para el error de estimación
 
 ## Solución
+
+Primero, se re ordena la tabla
+
+<div align="center">
+
+![Pivote](.assets/tabla_4_pivote.jpg "Tabla #4 en pivote")
+
+</div>
+
+Luego se pueden determinar algunos datos
+
+<div align="center">
+
+![Datos_de_las_muestras](.assets/ejecicio_4_muestras.jpg "Datos de las muestras")
+
+</div>
+
+Con los datos anteriores se puede usar excel para calcular algunas cosas
+
+<div align="center">
+
+![Ejercicio_4_desarrollo](.assets/ejecicio_4_muestras.jpg "Desarrollo del ejercicio 4")
+
+</div>
+
+Con estos datos podemos determinar los datos necesarios para responder el punto a 
+
+<div align="center">
+
+![solucion_ejercicio_4](.assets/ejecicio_4_solucion.jpg "Solución del ejercicio 4")
+
+</div>
