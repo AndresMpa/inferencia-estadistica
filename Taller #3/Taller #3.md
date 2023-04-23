@@ -95,7 +95,7 @@ Con los datos anteriores se puede usar excel para calcular algunas cosas
 
 <div align="center">
 
-![Ejercicio_4_desarrollo](.assets/ejecicio_4_muestras.jpg "Desarrollo del ejercicio 4")
+![Ejercicio_4_desarrollo](.assets/ejecicio_4_desarrollo.jpg "Desarrollo del ejercicio 4")
 
 </div>
 
