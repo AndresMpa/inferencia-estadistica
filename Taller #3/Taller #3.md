@@ -24,19 +24,33 @@ Obtenemos los datos preliminares:
 
 </div>
 
+Una vez tenemos los datos preliminares, se puede calcular algunos datos necesarios para el punto A
 
 <div align="center">
 
 ![Desarrollo#1-A](.assets/punto_1_A.jpg "Desarrollo #1-A")
 
+</div>
+
+Ahora bien, con los estos datos podemos determinar el total de la producción del consumidor ($\tau$), límite para el error ($\epsilon$) y el intervalo de confianza
+
+<div align="center">
+
 ![Solucion#1-A](.assets/solucion_1_A.jpg "Solución #1-A")
 
 </div>
 
+Ahora para poder calcular el tamaño de muestra adecuado se pueden usar los datos anteriores
 
 <div align="center">
 
 ![Desarrollo#1-B](.assets/punto_1_B.jpg "Desarrollo #1-B")
+
+</div>
+
+Con ello se puede calcular el tamaño de muestra adecuado
+
+<div align="center">
 
 ![Solucion#1-B](.assets/solucion_1_B.jpg "Solución #1-B")
 
@@ -44,6 +58,7 @@ Obtenemos los datos preliminares:
 
 Por tanto, se puede afirmar estadisticamente hablando que se requiere de 64.487 plantas (Aproximado a 65 plantas), esto para que el error maximo sea de 350 kilos
 
+---
 
 2. La policía de carreteras está interesada en la proporción de automovilistas que portan su licencia. Se instala un puesto de verificación en una carretera principal, y se detiene un vehículo cada siete. Use los datos de la tabla de la derecha para estimar la proporción de conductores que portan su licencia.
 
@@ -55,6 +70,8 @@ c) Calcular n maximizando el tamaño de muestra
 
 ## Solución
 
+---
+
 3. En un estudio sociológico realizado en una pequeña ciudad, se hicieron llamadas telefónicas para estimar la proporción de hogares donde habita cuando menos una persona mayor de 65 años de edad. La ciudad tiene 750 hogares, se tomó una muestra aleatoria de 85 hogares y se obtuvo la información de que en 21 de ellos habita por lo menos un adulto mayor a 65 años
 
 a) Estime la proporción de hogares donde habita por lo menos una persona mayor de 65 años de edad y establezca un límite para el error de estimación.
@@ -62,6 +79,24 @@ a) Estime la proporción de hogares donde habita por lo menos una persona mayor 
 b) Partiendo del supuesto de que no se ha realizado estudios similares en esta ciudad y se desea realizar una estadística que maneje una cota de error de 3 puntos y un nivel de significancia de 5%, ¿De cuánto debe ser el tamaño de la muestra?
 
 ## Solución
+
+Ejercicio 3 - A
+
+<div align="center">
+
+![Ejercicio_3_A](.assets/ejecicio_3_A.jpg "Ejercicio 3 A")
+
+</div>
+
+Ejercicio 3 - B
+
+<div align="center">
+
+![Ejercicio_3_B](.assets/ejecicio_3_B.jpg "Ejercicio 3 B")
+
+</div>
+
+---
 
 4. Las granjas de una cierta región se dividen en cuatro categorías según su superficie. El número de granjas en cada categoría es 72, 37, 50 y 11. Un estudio para estimar el total de vacas productoras de leche en la región produce una muestra estratificada de 28 granjas. El total de vacas productoras de leche en estas 28 granjas viene dado en la siguiente tabla.
 
