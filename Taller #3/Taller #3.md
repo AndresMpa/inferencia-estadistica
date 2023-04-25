@@ -24,7 +24,23 @@ Obtenemos los datos preliminares:
 
 </div>
 
-Una vez tenemos los datos preliminares, se puede calcular algunos datos necesarios para el punto A
+### Ejercicio 1-A
+
+Una vez tenemos los datos preliminares, se puede calcular algunos datos necesarios para el punto A, para ello podemos determinar las formulas que se han de usar:
+
+$$\tau = N * \bar{Y}_{st} = \sum_{i=1}^{L}{N_{i} * \bar{y}_i}$$
+
+$$
+\hat{V}(\bar{Y}_{st}) = N^2\hat{V}(\bar{Y}_{st}) = \sum_{i=1}^{L}{N_i^2 * (\frac{N_i - n_i}{N_i}) * (\frac{S_i^2}{n_i})}
+$$
+
+$$
+2 * \sqrt{\hat{V} (N \bar{Y}_{st})} = 2 * \sqrt{\sum_{i=1}^{L}{N_{i}^{2} * (\frac{N_i - n_i}{N_i}) * (\frac{S_i^2}{n_i})}}
+$$
+
+$$E = \sqrt(V(\tau)) * 2$$
+
+Podemos usar los datos anteriores y las formulas para facilmente calcular los resultado con excel
 
 <div align="center">
 
@@ -40,7 +56,19 @@ Ahora bien, con los estos datos podemos determinar el total de la producción de
 
 </div>
 
-Ahora para poder calcular el tamaño de muestra adecuado se pueden usar los datos anteriores
+### Ejercicio 1-B
+
+Ahora para poder calcular el tamaño de muestra adecuado se pueden usar los datos anteriores y la formula:
+
+$$
+n = \frac{\sum_{i=1}^{L}{N_i^2 * \frac{\sigma_i^2}{w_i}}}{N^2 * D + \sum_{i=1}^{L}{N_i * \sigma_i^2}}
+$$
+
+Recordar que el valor de D será:
+
+$$
+D = \frac{B^2}{4 * N^2}
+$$
 
 <div align="center">
 
@@ -48,7 +76,20 @@ Ahora para poder calcular el tamaño de muestra adecuado se pueden usar los dato
 
 </div>
 
-Con ello se puede calcular el tamaño de muestra adecuado
+Con ello se puede calcular el tamaño de muestra adecuado para esto será necesario determinar las sumatorias:
+
+$$
+\sum_{i=1}^{L}{N_i^2*(\frac{\sigma_i^2}{w_i})}
+$$
+
+> Cuyo valor será: $2017575$
+
+$$
+\sum_{i=1}^{L}{N_i*\sigma_i^2}
+$$
+
+> Cuyo valor será: $661.5$
+
 
 <div align="center">
 
@@ -70,7 +111,23 @@ c) Calcular n maximizando el tamaño de muestra
 
 ## Solución
 
-Ejercicio 2 - A
+### Ejercicio 2 - A
+
+Necesitamos calcular algunos datos preliminares con ayuda de las formulas:
+
+$$
+\hat{p} = \frac{\sum{Y_i}}{n}
+$$
+
+$$
+\hat{q} = 1 - \hat{p}
+$$
+
+$$
+\hat{V}(\bar{p}) = \frac{\hat{p} * \hat{q}}{n-1} * \frac{N - n}{N}
+$$
+
+Una vez se tengan estos datos se podrá calcular el intervalo de confianza y el limite para el error
 
 <div align="center">
 
@@ -78,27 +135,69 @@ Ejercicio 2 - A
 
 </div>
 
+Ya para determinar el limite para el error podemos usar la formula:
+
+$$
+2 * \sqrt{\hat{V}(\bar{p})}
+$$
+
+Para el intervalo se puede usar:
+
+$$
+int_{1,2} = \hat{p} \pm \epsilon
+$$
+
+<div align="center">
+
+![Ejercicio_2_B-1](.assets/ejecicio_2_A-2.jpg "Ejercicio 2 B-1")
+
+</div>
+
 Ejercicio 2 - B
 
+Para el calculo de $n$ con los datos que nos proporciona el ejercicio podemos usar la formula:
+
+$$
+n = \frac{N * \hat{p} * \hat{q}}{(N - 1) * D + \hat{p} * \hat{q}}
+$$
+
+Para este caso de uso, se puede determinar $D$ usando:
+
+$$
+D = \frac{B^2}{4}
+$$
+
 <div align="center">
 
-![Ejercicio_2_B-1](.assets/ejecicio_2_B-1.jpg "Ejercicio 2 B-1")
+![Ejercicio_2_B-2](.assets/ejecicio_2_B.jpg "Ejercicio 2 B-2")
 
 </div>
 
-<div align="center">
-
-![Ejercicio_2_B-2](.assets/ejecicio_2_B-2.jpg "Ejercicio 2 B-2")
-
-</div>
+$\therefore$ Estadisticamente hablando se puede decir que el tamaño de muestra necesario será de $n = 1384$
 
 Ejercicio 2 - C
+
+> Recordar el punto maximo está representado por $\hat{p} = 0.5$ y $\hat{q} = 0.5$
+
+Para este caso podemos usar las formulas anteriores:
+
+$$
+n = \frac{N * \hat{p} * \hat{q}}{(N - 1) * D + \hat{p} * \hat{q}}
+$$
+
+Para este caso de uso, se puede determinar $D$ usando:
+
+$$
+D = \frac{B^2}{4}
+$$
 
 <div align="center">
 
 ![Ejercicio_2_C](.assets/ejecicio_2_C.jpg "Ejercicio 2 C")
 
 </div>
+
+$\therefore$ Estadisticamente hablando podemos decir que el tamaño de muestra maximizado será de $n = 350$
 
 ---
 
@@ -110,7 +209,21 @@ b) Partiendo del supuesto de que no se ha realizado estudios similares en esta c
 
 ## Solución
 
-Ejercicio 3 - A
+### Ejercicio 3 - A
+
+Una vez se identificando los datos preliminares se pueden usar algunas formulas para facilitar el calculos del limite de error y de la proporción de hogares habitados por mayores de 65 años:
+
+$$
+\hat{p} = \frac{\sum{Y_i}}{n}
+$$
+
+$$
+\hat{q} = 1 - \hat{p}
+$$
+
+$$
+\hat{V}(\bar{p}) = \frac{\hat{p} * \hat{q}}{n-1} * \frac{N - n}{N}
+$$
 
 <div align="center">
 
@@ -118,13 +231,21 @@ Ejercicio 3 - A
 
 </div>
 
-Ejercicio 3 - B
+### Ejercicio 3 - B
+
+Para determinar el tamaño de esa población se puede usar la formula:
+
+$$
+\frac{Z_{\frac{\alpha}{2}} * \hat{p} * \hat{q}}{\epsilon^2}
+$$
 
 <div align="center">
 
 ![Ejercicio_3_B](.assets/ejecicio_3_B.jpg "Ejercicio 3 B")
 
 </div>
+
+$\therefore$ Estadisticamente hablando el tamaño de muestra que cumple con esos constrains será de aproxidamente $n = 405$
 
 ---
 
@@ -156,7 +277,20 @@ Luego se pueden determinar algunos datos
 
 </div>
 
-Con los datos anteriores se puede usar excel para calcular algunas cosas
+Con los datos anteriores se puede usar excel para calcular algunos datos para poder reemeplazar en las formulas que nos permitirán determinar la solución al problema:
+
+$$\tau = N * \bar{Y}_{st} = \sum_{i=1}^{L}{N_{i} * \bar{y}_i}$$
+
+$$
+\hat{V}(\bar{Y}_{st}) = N^2\hat{V}(\bar{Y}_{st}) = \sum_{i=1}^{L}{N_i^2 * (\frac{N_i - n_i}{N_i}) * (\frac{S_i^2}{n_i})}
+$$
+
+$$
+2 * \sqrt{\hat{V} (N \bar{Y}_{st})} = 2 * \sqrt{\sum_{i=1}^{L}{N_{i}^{2} * (\frac{N_i - n_i}{N_i}) * (\frac{S_i^2}{n_i})}}
+$$
+
+$$E = \sqrt(V(\tau)) * 2$$
+
 
 <div align="center">
 
@@ -164,7 +298,7 @@ Con los datos anteriores se puede usar excel para calcular algunas cosas
 
 </div>
 
-Con estos datos podemos determinar los datos necesarios para responder el punto a 
+Con estos datos podemos determinar los datos necesarios para responder el punto a
 
 <div align="center">
 
