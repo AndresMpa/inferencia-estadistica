@@ -90,7 +90,6 @@ $$
 
 > Cuyo valor será: $661.5$
 
-
 <div align="center">
 
 ![Solucion#1-B](.assets/solucion_1_B.jpg "Solución #1-B")
@@ -290,7 +289,6 @@ $$
 $$
 
 $$E = \sqrt(V(\tau)) * 2$$
-
 
 <div align="center">
 
