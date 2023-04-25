@@ -70,6 +70,30 @@ c) Calcular n maximizando el tamaño de muestra
 
 ## Solución
 
+<div align="center">
+
+![Ejercicio_2_A](.assets/ejecicio_2_A.jpg "Ejercicio 2 A")
+
+</div>
+
+<div align="center">
+
+![Ejercicio_2_B-1](.assets/ejecicio_2_B-1.jpg "Ejercicio 2 B-1")
+
+</div>
+
+<div align="center">
+
+![Ejercicio_2_B-2](.assets/ejecicio_2_B-2.jpg "Ejercicio 2 B-2")
+
+</div>
+
+<div align="center">
+
+![Ejercicio_2_C](.assets/ejecicio_2_C.jpg "Ejercicio 2 C")
+
+</div>
+
 ---
 
 3. En un estudio sociológico realizado en una pequeña ciudad, se hicieron llamadas telefónicas para estimar la proporción de hogares donde habita cuando menos una persona mayor de 65 años de edad. La ciudad tiene 750 hogares, se tomó una muestra aleatoria de 85 hogares y se obtuvo la información de que en 21 de ellos habita por lo menos un adulto mayor a 65 años
