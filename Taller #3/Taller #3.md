@@ -70,11 +70,15 @@ c) Calcular n maximizando el tamaño de muestra
 
 ## Solución
 
+Ejercicio 2 - A
+
 <div align="center">
 
 ![Ejercicio_2_A](.assets/ejecicio_2_A.jpg "Ejercicio 2 A")
 
 </div>
+
+Ejercicio 2 - B
 
 <div align="center">
 
@@ -87,6 +91,8 @@ c) Calcular n maximizando el tamaño de muestra
 ![Ejercicio_2_B-2](.assets/ejecicio_2_B-2.jpg "Ejercicio 2 B-2")
 
 </div>
+
+Ejercicio 2 - C
 
 <div align="center">
 
